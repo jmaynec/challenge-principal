@@ -38,5 +38,10 @@ PRUEBA_PRINCIPAL.postman_collection.json
 
 ## Implementacion de AWS Workflow Actions mediante archivo .github/worflows/sam-pipeline.yml
 
+## SWAGGER
 
+https://5yd9pwfh6i.execute-api.us-east-1.amazonaws.com/v3/api-docs
+
+* La version visual no esta disponible en la version spring boot - lambda debido a recursos que requiere la pag web al desplegarse
+* Se puede visualizar al levantar localmente aplicacion
 
