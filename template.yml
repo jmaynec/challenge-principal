@@ -8,9 +8,10 @@ Globals:
     EndpointConfiguration: REGIONAL
 
 Resources:
-  PetStoreFunction:
+  ProductosFunction:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: 'ProductosFunctionDev'
       Handler: cl.mayne.productos.StreamLambdaHandler::handleRequest
       Runtime: java11
       CodeUri: ./spring-lambda-productos
@@ -45,7 +46,7 @@ Resources:
       BillingMode: PAY_PER_REQUEST
 
 Outputs:
-  SpringBootPetStoreApi:
+  SpringBootProductosApi:
     Description: URL for application
     Value: !Sub 'https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com'
     Export:

@@ -22,7 +22,7 @@ import cl.mayne.productos.service.ProductoService;
 
 @RestController
 @RequestMapping("/productos")
-public class ProductosController{
+public class ProductosController implements IProductosController{
 	
 	@Autowired
 	private ProductoService productoService;
@@ -34,10 +34,10 @@ public class ProductosController{
     }
 
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<ProductoDTO> findAll() {
+    public ResponseEntity<List<ProductoDTO>> findAll() {
     	List<ProductoDTO> productoList = productoService.findAll();
     	System.out.println(productoList);
-        return productoList;
+        return ResponseEntity.ok(productoList);
     }
     
     @GetMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)

@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "sam-lambda-test-jmayne"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-u2fxzmdqs8wj"
+s3_prefix = "sam-lambda-test-jmayne"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []

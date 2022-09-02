@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "00955f22-219d-4a86-a582-a0f423e56336",
+		"name": "PRUEBA_PRINCIPAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Productos",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET Producto Por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://5yd9pwfh6i.execute-api.us-east-1.amazonaws.com/productos/9f1140dc-694a-4d2b-bb23-69187d312d5b",
+					"protocol": "https",
+					"host": [
+						"5yd9pwfh6i",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"productos",
+						"9f1140dc-694a-4d2b-bb23-69187d312d5b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Producto Por ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://5yd9pwfh6i.execute-api.us-east-1.amazonaws.com/productos/9f1140dc-694a-4d2b-bb23-69187d312d5b",
+					"protocol": "https",
+					"host": [
+						"5yd9pwfh6i",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"productos",
+						"9f1140dc-694a-4d2b-bb23-69187d312d5b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Nuevo Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Notebook Bravo 15\",\r\n    \"marca\": \"Asus\",\r\n    \"descripcion\": \"Bravo 15 Rhyzen 7 16Gb\",\r\n    \"modelo\": \"54DF34\",\r\n    \"categoria\": \"Notebook\",\r\n    \"precioVenta\": \"1100000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://5yd9pwfh6i.execute-api.us-east-1.amazonaws.com/productos",
+					"protocol": "https",
+					"host": [
+						"5yd9pwfh6i",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualizar Producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"9f1140dc-694a-4d2b-bb23-69187d312d5b\",\r\n        \"nombre\": \"Consola Switch\",\r\n        \"descripcion\": \"16Gb Doble Comando\",\r\n        \"marca\": \"Nintendo\",\r\n        \"modelo\": \"ZZ99\",\r\n        \"categoria\": \"Consolas\",\r\n        \"precioVenta\": 1800,\r\n        \"descuento\": 10\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://5yd9pwfh6i.execute-api.us-east-1.amazonaws.com/productos",
+					"protocol": "https",
+					"host": [
+						"5yd9pwfh6i",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

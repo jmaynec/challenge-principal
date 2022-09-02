@@ -1,5 +1,6 @@
 package cl.mayne.productos.service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -17,6 +18,10 @@ public class ProductoServiceImpl implements ProductoService {
 
 	@Autowired
 	private ProductoDao productoDao;
+	@Autowired
+	private DescuentoProductoService descuentoProductoService;
+	@Autowired
+	private DescuentoService descuentoService;
 
 	@Override
 	public List<ProductoDTO> findAll() {
@@ -29,9 +34,14 @@ public class ProductoServiceImpl implements ProductoService {
 	@Override
 	public Optional<ProductoDTO> guardarProducto(ProductoDTO productoDto) {
 
+		//Obtener descuento
+		BigDecimal descuento = descuentoService.obtenerDescuento();
+		//Aplicar Descuento
+		descuentoProductoService.aplicarDescuento(productoDto, descuento);
+		
 		if (productoDto != null && productoDto.getId() == null) {
 			Producto producto = productoDto.toEntity();
-			producto.setId(UUID.randomUUID().toString());			
+			producto.setId(UUID.randomUUID().toString());	
 			productoDto = new ProductoDTO(productoDao.save(producto));
 		}
 		return Optional.of(productoDto);
