@@ -9,7 +9,7 @@ solucion debe estar desplegada en AWS
 * [Maven](https://maven.apache.org/)
 * [Java 11]
 
-## Compilar proyecto
+## Compilar proyecto XX
 En linea de comando navegar hasta la carpeta raiz donde se encuentra el archivo template.yml, usar sam cli para compilar proyecto
 ```
 $ sam build
